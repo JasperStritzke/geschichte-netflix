@@ -67,7 +67,7 @@ function App() {
                             <div className={"resolution"}>8K</div>
                         </div>
                         <div className={"description"}>
-                            <p>Die Familie Müller ist eine normale, sozialistische Familie in der DDR. Als Doreen Müller verhaftet wurde änderte sich einiges für sie und ihren Mann, der als Inofizieller Mitarbeiter für die Stasi arbeiutet.</p>
+                            <p>Die Familie Müller ist eine normale, sozialistische Familie in der DDR. Als Doreen Müller verhaftet wurde änderte sich einiges für sie und ihren Mann, der als Inofizieller Mitarbeiter für die Stasi arbeitet.</p>
                         </div>
                     </div>
                     <div className={"cast"}>
