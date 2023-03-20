@@ -15,10 +15,29 @@ html, body {
   color-scheme: dark;
 }
 
+@media screen and (max-width: 800px) {
+  body {
+    display: none;
+  }
+
+  html::after {
+    content: "Bitte nur auf einem Tablet oder Laptop im Querformat ansehen, danke :)";
+
+    color: rgba(white, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-weight: 400;
+  }
+}
+
 body {
   background-color: $gray;
-  background-image: url("../assets/background.png");
+  background-image: url("./assets/background.png");
   background-size: cover;
+  background-position: top;
 
   &::before {
     content: "";
@@ -57,7 +76,7 @@ div.popover__container {
     box-shadow: rgba(0, 0, 0, 0.75) 0 0 10px;
 
     .header {
-      background-image: url("../assets/testImage.png");
+      background-image: url("./assets/covers/1.png");
       width: 100%;
       height: 650px;
 
@@ -185,7 +204,11 @@ div.popover__container {
           font-size: 14px;
           line-height: 1.2rem;
           margin: 0;
-          color: rgba($white, 0.95)
+          color: rgba($white, 0.95);
+
+          &:hover {
+            text-decoration: underline;
+          }
         }
 
         span {
@@ -216,6 +239,8 @@ div.popover__container {
         }
 
         div.selection {
+          cursor: pointer;
+
           user-select: none;
           position: relative;
 
@@ -226,6 +251,14 @@ div.popover__container {
 
           padding: 8px 16px;
           background-color: lighten($black, 3);
+
+          &:hover {
+            background-color: lighten($black, 8);
+          }
+
+          &:active {
+            background-color: lighten($black, 2);
+          }
 
           display: flex;
           gap: 15px;
@@ -345,13 +378,22 @@ div.popover__container {
         }
 
         .episode__cover {
-          max-width: 100px;
-          aspect-ratio: 3/2;
+          width: 125px;
+          aspect-ratio: 1;
 
           margin-right: 10px;
 
+          flex-grow: 0;
+          flex-shrink: 0;
+
+          overflow: hidden;
+
           border-radius: 5px;
           box-shadow: 0 0 10px rgba(black, 0.3);
+
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
         }
 
         .episode__content {
