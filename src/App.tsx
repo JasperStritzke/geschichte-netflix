@@ -21,7 +21,7 @@ function App() {
                         </svg>
                     </div>
 
-                    <img src={"./assets/Misstraut.png"} alt={"Logo"}/>
+                    <img src={"./images/Misstraut.png"} alt={"Logo"}/>
                     <div className={"header__actions"}>
                         <button>
                             <i className="ri-play-fill"></i>
